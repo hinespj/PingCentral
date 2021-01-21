@@ -1,14 +1,14 @@
 
-helm install pf-central-hines pingidentity/ping-devops -f pf-central-hines.yaml
-helm uninstall pf-central-hines
+helm install central-hines pingidentity/ping-devops -f pf-central-hines.yaml
+helm uninstall central-hines
 
-https://pingfederate-admin-pf-central-hines.ping-devops.com:443/pingfederate/app?service=finishsso
+https://pingfederate-admin-central-hines.ping-devops.com:443/pingfederate/app?service=finishsso
 
 
-helm install pf-central2-hines pingidentity/ping-devops -f pf-central2-hines.yaml
-helm uninstall pf-central2-hines
+helm install central2-hines pingidentity/ping-devops -f pf-central2-hines.yaml
+helm uninstall central2-hines
 
-https://pingfederate-admin-pf-central2-hines.ping-devops.com:443/pingfederate/app?service=finishsso
+https://pingfederate-admin-central2-hines.ping-devops.com:443/pingfederate/app?service=finishsso
 
 
 ${PF_BASE_URL}
@@ -18,3 +18,6 @@ ${PF_ADMIN_PUBLIC_HOSTNAME}
 git add .
 git commit -m "Add new files"
 git push
+
+
+https://pingcentral.ping-eng.com:9022/login/oauth2/code/pingcentral
